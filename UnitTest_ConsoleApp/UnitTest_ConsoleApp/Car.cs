@@ -6,9 +6,16 @@ using System.Threading.Tasks;
 
 namespace UnitTest_ConsoleApp
 {
-    public class Car : UnitTest_ConsoleApp.ICar
+    public class Car : ICar
     {
+        public string Name { get; set; }
 
+        public Car(string name)
+        {
+            Name = name;
+        }
+
+ 
 
         public int oblicz(int dane)
         {

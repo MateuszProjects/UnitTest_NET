@@ -10,6 +10,9 @@ namespace UnitTest_ConsoleApp
     {
         static void Main(string[] args)
         {
+            Car car = new Car("Toyota");
+            Console.Write(car.Name);
+            Console.ReadKey();
         }
     }
 }

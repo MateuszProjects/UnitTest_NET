@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace UnitTest_ConsoleApp
 {
-    interface ICar
+    public interface ICar
     {
+        string Name { get; set; }
+
     }
 }

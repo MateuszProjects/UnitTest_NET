@@ -15,7 +15,7 @@ namespace UnitTest_ConsoleApp.Tests
         public void obliczObliczTest()
         {
             var exceptionresult = 25;
-            var car = new Car();
+            var car = new Car("toyota");
             var dane = car.oblicz(5);
 
 
