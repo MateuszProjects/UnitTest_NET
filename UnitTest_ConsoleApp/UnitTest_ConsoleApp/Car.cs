@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace UnitTest_ConsoleApp
 {
-    public class Car
+    public class Car : UnitTest_ConsoleApp.ICar
     {
 
 
