@@ -5,21 +5,34 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using UnitTest_ConsoleApp.Classes;
 namespace UnitTest_ConsoleApp.Tests
 {
-    [TestClass()]
+    [TestClass]
     public class CarTests
     {
-        [TestMethod()]
-        public void obliczObliczTest()
+
+        CarTrunk myCarTrunk;
+        Car myCar;
+        
+
+        [TestInitialize]
+        public void TestInit()
         {
-            var exceptionresult = 25;
-            var car = new Car("toyota");
-            var dane = car.oblicz(5);
+            myCarTrunk = new CarTrunk(2);
+            myCar = new Car("Test model", myCarTrunk);
+        }
 
+        [TestMethod]
+        public void PackLuggageToTheTrunk_Test()
+        {
+            // Given
 
-            Assert.AreEqual(exceptionresult, dane);
+            // When
+
+            // Then
+
+            // Assert.AreEqual();
         }
     }
 }

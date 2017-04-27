@@ -43,7 +43,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\Car.cs" />
+    <Compile Include="Classes\CarTrunk.cs" />
     <Compile Include="Interfaces\ICar.cs" />
+    <Compile Include="Interfaces\ICarTrunk.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
