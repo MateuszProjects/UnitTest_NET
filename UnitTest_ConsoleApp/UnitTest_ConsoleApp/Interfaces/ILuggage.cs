@@ -6,10 +6,8 @@ using System.Threading.Tasks;
 
 namespace UnitTest_ConsoleApp.Interfaces
 {
-  public interface ICarTrunk
+   public interface ILuggage
     {
-        int TrunkCapacity { get; }
-
-        void PackItem(string carModel, ILuggage item);
+        string Name { get; set; }
     }
 }

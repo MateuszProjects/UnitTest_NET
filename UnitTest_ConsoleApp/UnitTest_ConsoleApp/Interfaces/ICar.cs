@@ -9,8 +9,12 @@ namespace UnitTest_ConsoleApp
 {
     public interface ICar
     {
-        string Name { get;  }
+        string Model { get;  }
         
         ICarTrunk Trunk { get; }
+
+        int CheckerFulLevel();
+
+        bool PackLuggageToTheTrunk(List<ILuggage> luggageItems);
     }
 }

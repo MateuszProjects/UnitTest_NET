@@ -44,8 +44,12 @@
   <ItemGroup>
     <Compile Include="Classes\Car.cs" />
     <Compile Include="Classes\CarTrunk.cs" />
+    <Compile Include="Classes\FamilyTrip.cs" />
+    <Compile Include="Classes\FuelChecker.cs" />
+    <Compile Include="Classes\Luggage.cs" />
     <Compile Include="Interfaces\ICar.cs" />
     <Compile Include="Interfaces\ICarTrunk.cs" />
+    <Compile Include="Interfaces\ILuggage.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

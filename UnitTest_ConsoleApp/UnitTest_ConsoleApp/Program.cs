@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using UnitTest_ConsoleApp.Classes;
-
+using UnitTest_ConsoleApp.Interfaces;
 
 namespace UnitTest_ConsoleApp
 {
@@ -12,9 +12,23 @@ namespace UnitTest_ConsoleApp
     {
         static void Main(string[] args)
         {
-            CarTrunk carTrunk = new CarTrunk(3);
-            Car car = new Car("Toyota",carTrunk);
-            Console.Write(car.Name, car.Trunk.TrunkCapacity);
+            var carTrunk = new CarTrunk(3);
+            var ourFamilyCar = new Car("Toyota Corolla",carTrunk);
+
+            var mommyBag = new Luggage("Huge mommy bag");
+            var tennisRacket = new Luggage("My tennis racket");
+            var dadTools = new Luggage("Dad tools");
+            // var notNeededLuggage = new Luggage("Useless stuff");
+
+            var ourLuggage = new List<ILuggage>();
+            ourLuggage.Add(mommyBag);
+            ourLuggage.Add(tennisRacket);
+            ourLuggage.Add(dadTools);
+            // ourLuggage.Add(notNeededLuggage);
+
+            var ourFamilyTrip = new FamilyTrip(ourFamilyCar, ourLuggage);
+
+            ourFamilyTrip.PrepareFamilyTrip();
             Console.ReadKey();
         }
     }
