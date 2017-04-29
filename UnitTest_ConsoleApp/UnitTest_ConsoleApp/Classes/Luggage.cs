@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace UnitTest_ConsoleApp.Classes
 {
-    class Luggage : Interfaces.ILuggage
+    public class Luggage : Interfaces.ILuggage
     {
         public string Name { get; set; }
 
