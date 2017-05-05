@@ -1,13 +1,9 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using UnitTest_ConsoleApp;
+using Moq;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using UnitTest_ConsoleApp.Classes;
 using UnitTest_ConsoleApp.Interfaces;
-
 namespace UnitTest_ConsoleApp.Tests
 {
     [TestClass]
@@ -95,5 +91,39 @@ namespace UnitTest_ConsoleApp.Tests
 
            
         }
+
+        [TestMethod]
+        public void ShouldCallPackMethodAsManyTimesAsLuggageCount()
+        {
+            // TODO: Zadanie nr 8
+            // Napisz test jednostkowy sprawdzający czy metoda „PackItem” 
+            // została wywołana tyle razy ile jest bagażu
+
+            // Wskazówka: Moq pozwala na zweryfikowanie czy dana metoda została 
+            // wywołana po wykonaniu się kodu innej metody.
+            // Użyj odpowiednią metodę na zamockowanej zależności
+
+            //         public void PackItem(string carModel, ILuggage item)
+
+            // Given
+            var fakeTrunk = new Mock<ICarTrunk>();
+            var fakeLuggage = new Mock<List<ILuggage>>();
+            var fakeCar = new Mock<ICar>();
+
+            // When
+            fakeLuggage.Setup(x => x.Count).Returns(3);
+            fakeCar.Setup(y => y.Model);
+
+            var ourCar = new Car(null, fakeTrunk.Object);
+            var outTranck = new CarTrunk(3);
+
+             
+            // Then
+
+            //  Assert.AreEqual(fakeLuggage, fakeTrunk);
+
+
+        }
+
     }
 }

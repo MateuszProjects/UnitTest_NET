@@ -11,5 +11,6 @@ namespace UnitTest_ConsoleApp.Interfaces
         int TrunkCapacity { get; }
 
         void PackItem(string carModel, ILuggage item);
+
     }
 }

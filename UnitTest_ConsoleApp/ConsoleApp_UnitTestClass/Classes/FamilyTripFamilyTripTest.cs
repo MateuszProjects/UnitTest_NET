@@ -11,10 +11,14 @@ namespace UnitTest_ConsoleApp.Classes.Tests
     [TestClass()]
     public class FamilyTripFamilyTripTest
     {
-        [TestMethod()]
-        public void PrepareFamilyTripObliczTest()
+        [TestMethod]
+        public void ShouldPrepareFamilyTripReturnFalseWhenExceptionOccurredDuringPackingLuggage()
         {
-            Assert.Fail();
+            // TODO: Zadanie nr 7
+            // Napisz test jednostkowy sprawdzający metodę „PrepareFamilyTrip” 
+            // czy zwraca „false” gdy metoda użyta do pakowania bagażu zwraca wyjątek
+
+            //    Assert.Fail();
         }
     }
 }
