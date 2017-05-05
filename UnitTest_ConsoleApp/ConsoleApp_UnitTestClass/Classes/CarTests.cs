@@ -9,6 +9,10 @@ namespace UnitTest_ConsoleApp.Tests
     [TestClass]
     public class CarTests
     {
+        // TODO: Zadanie nr 4
+        // Zainicjalizuj powtarzające się dane używane w dotychczasowych testach 
+        // w odpowiedniej metodzie inicjalizującej każdy test
+        // Wskazówka: Użyj odpowiedniego atrybutu testów używanego w MSTest framework
 
         CarTrunk myCarTrunk;
         Car myCar;
@@ -92,6 +96,35 @@ namespace UnitTest_ConsoleApp.Tests
            
         }
 
+        [TestMethod]
+        public void ShouldCallPackMethodAsManyTimesAsLuggageCount()
+        {
+            // TODO: Zadanie nr 8
+            // Napisz test jednostkowy sprawdzający czy metoda „PackItem” 
+            // została wywołana tyle razy ile jest bagażu
+
+            // Given
+            var fakeTrunk = new Mock<ICarTrunk>();
+            var fakeCar = new Mock<ICar>();
+            var fakeLuggage = new Mock<List<ILuggage>>();
+        
+
+            fakeLuggage.Setup(x => x.Count).Returns(2);
+            fakeCar.Setup(x => x.PackLuggageToTheTrunk(null));
+            fakeTrunk.Setup(x => x.PackItem(null, null));
+
+      
+            var ourTrip = new FamilyTrip(null, fakeLuggage.Object);
+
+
+            // When
+
+            var result = ourTrip.PrepareFamilyTrip();
+
+            // Then
+
+            Assert.IsTrue(result);
+        }
 
 
     }

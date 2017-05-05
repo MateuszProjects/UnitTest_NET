@@ -48,7 +48,9 @@ namespace UnitTest_ConsoleApp.Classes.Tests
             // czy zwraca „false” gdy poziom paliwa jest niewystarczający
 
             // Give
+            fakecar.Setup(y => y.PackLuggageToTheTrunk(null)).Returns(true);
             fakecar.Setup(x => x.CheckerFulLevel()).Returns(48);
+
 
             var ourFamilyTrip = new FamilyTrip(fakecar.Object, null);
             // When
@@ -56,6 +58,26 @@ namespace UnitTest_ConsoleApp.Classes.Tests
 
             // Then
             Assert.IsFalse(result);
+        }
+
+        [TestMethod]
+        public void ShouldPrepareFamilyTripReturnTrueWhenAllIsOk()
+        {
+            // TODO: Zadanie nr 5
+            // Napisz test jednostkowy sprawdzający metodę „PrepareFamilyTrip” czy zwraca „true” 
+            // gdy wszystkie zależności zwracają wartości umożliwiające pełne 
+            // przejście przez instrukcje warunkowe
+
+            // Give
+            fakecar.Setup(x => x.PackLuggageToTheTrunk(null)).Returns(true);
+            fakecar.Setup(y => y.CheckerFulLevel()).Returns(51);
+
+            // When
+            var ourFamilyTrip = new FamilyTrip(fakecar.Object, null);
+
+            var result = ourFamilyTrip.PrepareFamilyTrip();
+            // Then
+            Assert.IsTrue(result);
         }
     }
 }
