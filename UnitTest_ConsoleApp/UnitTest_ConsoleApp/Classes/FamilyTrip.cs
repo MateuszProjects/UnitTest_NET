@@ -7,7 +7,7 @@ using UnitTest_ConsoleApp.Interfaces;
 
 namespace UnitTest_ConsoleApp.Classes
 {
-    class FamilyTrip
+    public class FamilyTrip
     {
         private ICar _familyCar;
 

@@ -48,7 +48,8 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CarTests.cs" />
+    <Compile Include="Classes\CarTests.cs" />
+    <Compile Include="Classes\FamilyTripFamilyTripTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
