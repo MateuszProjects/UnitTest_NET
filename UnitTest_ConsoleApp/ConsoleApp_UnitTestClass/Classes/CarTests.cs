@@ -59,7 +59,6 @@ namespace UnitTest_ConsoleApp.Tests
             // bagaż przekracza rozmiar bagażnika samochodu
 
             // Given
-
             var myLuggage_one = new Luggage("luggage one");
             var myLuggage_second = new Luggage("luggage second");
             var myLuggage_three = new Luggage("luggage three");
@@ -69,11 +68,9 @@ namespace UnitTest_ConsoleApp.Tests
             laggageList.Add(myLuggage_three);
 
             // When
-
             var result = myCar.PackLuggageToTheTrunk(laggageList);
 
             // Then
-
             Assert.AreNotEqual(true, result);
         }
 
