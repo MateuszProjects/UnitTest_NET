@@ -95,7 +95,7 @@ namespace UnitTest_ConsoleApp.Tests
 
            
         }
-
+        /*
         [TestMethod]
         public void ShouldCallPackMethodAsManyTimesAsLuggageCount()
         {
@@ -125,7 +125,7 @@ namespace UnitTest_ConsoleApp.Tests
 
             Assert.IsTrue(result);
         }
-
+        */
 
     }
 }

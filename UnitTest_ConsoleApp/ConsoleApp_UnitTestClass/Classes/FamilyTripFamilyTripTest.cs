@@ -68,6 +68,7 @@ namespace UnitTest_ConsoleApp.Classes.Tests
             // gdy wszystkie zależności zwracają wartości umożliwiające pełne 
             // przejście przez instrukcje warunkowe
 
+
             // Give
             fakecar.Setup(x => x.PackLuggageToTheTrunk(null)).Returns(true);
             fakecar.Setup(y => y.CheckerFulLevel()).Returns(51);
